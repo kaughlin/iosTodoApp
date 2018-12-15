@@ -12,7 +12,7 @@
         <!--All Tasks-->
         <scene sceneID="afZ-se-pcl">
             <objects>
-                <tableViewController id="tlu-jI-wLn" sceneMemberID="viewController">
+                <tableViewController id="tlu-jI-wLn" customClass="TodoTableViewController" customModule="iosToDoapp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QSe-aW-t6Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="1060" y="-70.614692653673174"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Todo View Controller-->
         <scene sceneID="LQe-XF-40b">
             <objects>
-                <viewController id="xTy-LE-3xC" sceneMemberID="viewController">
+                <viewController id="xTy-LE-3xC" customClass="AddTodoViewController" customModule="iosToDoapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nbG-GY-wVp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,6 +80,9 @@
                                         <color key="textColor" white="0.66666666669999997" alpha="0.75759242957746475" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="xTy-LE-3xC" id="E0t-mQ-Mht"/>
+                                        </connections>
                                     </textView>
                                 </subviews>
                             </stackView>
@@ -99,7 +102,7 @@
                                         <rect key="frame" x="0.0" y="36" width="343" height="36"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fm-QH-NRs">
-                                                <rect key="frame" x="0.0" y="0.0" width="70" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="36"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="U4Z-Wj-MdW"/>
@@ -113,14 +116,25 @@
                                                         <integer key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="cancel:" destination="xTy-LE-3xC" eventType="touchUpInside" id="DLY-UD-82m"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="245" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyh-rx-ayF">
-                                                <rect key="frame" x="78" y="0.0" width="265" height="36"/>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="245" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyh-rx-ayF">
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="36"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                 <state key="normal" title="Done">
                                                     <color key="titleColor" red="0.30522095059999999" green="0.3212435233" blue="0.29971831230000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="done:" destination="xTy-LE-3xC" eventType="touchUpInside" id="DnS-2h-qkE"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -135,11 +149,17 @@
                             <constraint firstItem="6up-NW-uRz" firstAttribute="leading" secondItem="Kmu-vU-gF2" secondAttribute="leading" constant="16" id="I5i-zv-QoT"/>
                             <constraint firstItem="GIy-ER-ZgX" firstAttribute="bottom" secondItem="nbG-GY-wVp" secondAttribute="bottomMargin" id="JS1-Xx-ZO9"/>
                             <constraint firstItem="6up-NW-uRz" firstAttribute="height" secondItem="nbG-GY-wVp" secondAttribute="height" multiplier="0.4" id="LhN-Hh-8O2"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="GIy-ER-ZgX" secondAttribute="bottom" id="Noy-TN-wln"/>
+                            <constraint firstAttribute="bottom" secondItem="GIy-ER-ZgX" secondAttribute="bottom" id="Noy-TN-wln"/>
                             <constraint firstItem="6up-NW-uRz" firstAttribute="top" secondItem="Kmu-vU-gF2" secondAttribute="top" id="fbg-YG-dtd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kmu-vU-gF2"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="Noy-TN-wln" id="Ncj-iV-e7b"/>
+                        <outlet property="doneButton" destination="tyh-rx-ayF" id="JbJ-P9-l3g"/>
+                        <outlet property="inputTextview" destination="NuO-WS-u32" id="6eZ-9u-0dJ"/>
+                        <outlet property="segmentedControl" destination="ooK-uH-QQu" id="2aI-os-Omu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gFM-rM-O5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

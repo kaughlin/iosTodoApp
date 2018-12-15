@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		10A380B121C4879A0075F761 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A380B021C4879A0075F761 /* AppDelegate.swift */; };
-		10A380B321C4879A0075F761 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A380B221C4879A0075F761 /* ViewController.swift */; };
 		10A380B621C4879A0075F761 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A380B421C4879A0075F761 /* Main.storyboard */; };
 		10A380B821C4879C0075F761 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A380B721C4879C0075F761 /* Assets.xcassets */; };
 		10A380BB21C4879C0075F761 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A380B921C4879C0075F761 /* LaunchScreen.storyboard */; };
 		10A380C621C4879D0075F761 /* iosToDoappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A380C521C4879D0075F761 /* iosToDoappTests.swift */; };
 		10A380D121C4879D0075F761 /* iosToDoappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A380D021C4879D0075F761 /* iosToDoappUITests.swift */; };
+		10A380E021C49C390075F761 /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A380DF21C49C390075F761 /* AddTodoViewController.swift */; };
+		10A380E221C49C570075F761 /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A380E121C49C570075F761 /* TodoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		10A380AD21C4879A0075F761 /* iosToDoapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosToDoapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A380B021C4879A0075F761 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		10A380B221C4879A0075F761 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		10A380B521C4879A0075F761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		10A380B721C4879C0075F761 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10A380BA21C4879C0075F761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		10A380CC21C4879D0075F761 /* iosToDoappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosToDoappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A380D021C4879D0075F761 /* iosToDoappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosToDoappUITests.swift; sourceTree = "<group>"; };
 		10A380D221C4879D0075F761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10A380DF21C49C390075F761 /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
+		10A380E121C49C570075F761 /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,8 @@
 		10A380AF21C4879A0075F761 /* iosToDoapp */ = {
 			isa = PBXGroup;
 			children = (
+				10A380DE21C49BCA0075F761 /* ViewControllers */,
 				10A380B021C4879A0075F761 /* AppDelegate.swift */,
-				10A380B221C4879A0075F761 /* ViewController.swift */,
 				10A380B421C4879A0075F761 /* Main.storyboard */,
 				10A380B721C4879C0075F761 /* Assets.xcassets */,
 				10A380B921C4879C0075F761 /* LaunchScreen.storyboard */,
@@ -123,6 +125,15 @@
 				10A380D221C4879D0075F761 /* Info.plist */,
 			);
 			path = iosToDoappUITests;
+			sourceTree = "<group>";
+		};
+		10A380DE21C49BCA0075F761 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				10A380DF21C49C390075F761 /* AddTodoViewController.swift */,
+				10A380E121C49C570075F761 /* TodoTableViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +267,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10A380B321C4879A0075F761 /* ViewController.swift in Sources */,
+				10A380E221C49C570075F761 /* TodoTableViewController.swift in Sources */,
+				10A380E021C49C390075F761 /* AddTodoViewController.swift in Sources */,
 				10A380B121C4879A0075F761 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RBDM72Q3W2;
 				INFOPLIST_FILE = iosToDoapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RBDM72Q3W2;
 				INFOPLIST_FILE = iosToDoapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
