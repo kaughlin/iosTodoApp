@@ -28,7 +28,7 @@ class AddTodoViewController: UIViewController {
             name: UIResponder.keyboardWillShowNotification,
             object: nil
         )
-        
+        inputTextview.becomeFirstResponder()
     }
     
     //MARK: Actions
@@ -39,7 +39,7 @@ class AddTodoViewController: UIViewController {
         
         guard let keyboardFrame = notification.userInfo?[key] as? NSValue else {return}
         
-        let keyboardHeight = keyboardFrame.cgRectValue.height
+        let keyboardHeight = keyboardFrame.cgRectValue.height + 16
         
         bottomConstraint.constant = keyboardHeight
         
@@ -52,8 +52,10 @@ class AddTodoViewController: UIViewController {
     @IBAction func cancel(_ sender: UIButton) {
         //dismmiss view
         dismiss(animated: true)
+        inputTextview.resignFirstResponder()
     }
     @IBAction func done(_ sender: UIButton) {
+        dismiss(animated: true)
     }
     
     /*
@@ -66,4 +68,16 @@ class AddTodoViewController: UIViewController {
     }
     */
 
+}
+extension AddTodoViewController: UITextViewDelegate {
+    func textViewDidChangeSelection(_ textView: UITextView) {
+        if doneButton.isHidden{
+            textView.text.removeAll()
+            textView.textColor = .white
+            
+            doneButton.isHidden = false
+            UIView.animate(withDuration: 0.3, animations: {self.view.layoutIfNeeded()})
+           
+        }
+    }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1010AC9121C76E250030DB2A /* Todos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1010AC8F21C76E250030DB2A /* Todos.xcdatamodeld */; };
 		10A380B121C4879A0075F761 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A380B021C4879A0075F761 /* AppDelegate.swift */; };
 		10A380B621C4879A0075F761 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A380B421C4879A0075F761 /* Main.storyboard */; };
 		10A380B821C4879C0075F761 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A380B721C4879C0075F761 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1010AC9021C76E250030DB2A /* Todos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Todos.xcdatamodel; sourceTree = "<group>"; };
 		10A380AD21C4879A0075F761 /* iosToDoapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosToDoapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A380B021C4879A0075F761 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10A380B521C4879A0075F761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1010AC8E21C76DDA0030DB2A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1010AC8F21C76E250030DB2A /* Todos.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		10A380A421C4879A0075F761 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +109,7 @@
 		10A380AF21C4879A0075F761 /* iosToDoapp */ = {
 			isa = PBXGroup;
 			children = (
+				1010AC8E21C76DDA0030DB2A /* CoreData */,
 				10A380DE21C49BCA0075F761 /* ViewControllers */,
 				10A380B021C4879A0075F761 /* AppDelegate.swift */,
 				10A380B421C4879A0075F761 /* Main.storyboard */,
@@ -270,6 +281,7 @@
 				10A380E221C49C570075F761 /* TodoTableViewController.swift in Sources */,
 				10A380E021C49C390075F761 /* AddTodoViewController.swift in Sources */,
 				10A380B121C4879A0075F761 /* AppDelegate.swift in Sources */,
+				1010AC9121C76E250030DB2A /* Todos.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +606,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1010AC8F21C76E250030DB2A /* Todos.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1010AC9021C76E250030DB2A /* Todos.xcdatamodel */,
+			);
+			currentVersion = 1010AC9021C76E250030DB2A /* Todos.xcdatamodel */;
+			path = Todos.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 10A380A521C4879A0075F761 /* Project object */;
 }
