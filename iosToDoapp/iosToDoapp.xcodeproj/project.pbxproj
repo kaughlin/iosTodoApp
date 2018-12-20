@@ -16,6 +16,7 @@
 		10A380D121C4879D0075F761 /* iosToDoappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A380D021C4879D0075F761 /* iosToDoappUITests.swift */; };
 		10A380E021C49C390075F761 /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A380DF21C49C390075F761 /* AddTodoViewController.swift */; };
 		10A380E221C49C570075F761 /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A380E121C49C570075F761 /* TodoTableViewController.swift */; };
+		10E7FE3421C82FB5001C8616 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E7FE3321C82FB5001C8616 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		10A380D221C4879D0075F761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10A380DF21C49C390075F761 /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
 		10A380E121C49C570075F761 /* TodoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
+		10E7FE3321C82FB5001C8616 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				1010AC8F21C76E250030DB2A /* Todos.xcdatamodeld */,
+				10E7FE3321C82FB5001C8616 /* CoreDataStack.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10E7FE3421C82FB5001C8616 /* CoreDataStack.swift in Sources */,
 				10A380E221C49C570075F761 /* TodoTableViewController.swift in Sources */,
 				10A380E021C49C390075F761 /* AddTodoViewController.swift in Sources */,
 				10A380B121C4879A0075F761 /* AppDelegate.swift in Sources */,

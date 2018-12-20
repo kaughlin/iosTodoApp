@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import CoreData
 
 class AddTodoViewController: UIViewController {
+    
+    //MARK: - Properties
 
-    //MARK: Outlets
+    var managedContext: NSManagedObjectContext!
+    
+    //MARK: -Outlets
 
     @IBOutlet weak var inputTextview: UITextView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -55,7 +60,23 @@ class AddTodoViewController: UIViewController {
         inputTextview.resignFirstResponder()
     }
     @IBAction func done(_ sender: UIButton) {
-        dismiss(animated: true)
+        guard let title = inputTextview.text, !title.isEmpty else {
+            //Todo add alert to let user know can not save empty todos
+            return
+        }
+        let todo = Todo(context: managedContext)
+        todo.title = title
+        todo.priority = Int16(segmentedControl.selectedSegmentIndex)
+        todo.date = Date()
+        
+        //now save todo
+        do {
+            try managedContext.save()
+            dismiss(animated: true)
+            inputTextview.resignFirstResponder()
+        } catch {
+            print("Error saving todo: \(error)")
+        }
     }
     
     /*
